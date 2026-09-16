@@ -1,0 +1,37 @@
+# PHP / Laravel
+/backend/vendor/
+/backend/storage/*.key
+/backend/storage/logs/*.log
+/backend/public/storage
+/backend/public/hot
+
+# Node / Vue
+/frontend/node_modules/
+/frontend/dist/
+
+# Python
+/python-service/.venv/
+__pycache__/
+*.pyc
+
+# Bi mat va cau hinh cuc bo
+.env
+.env.*
+!.env.example
+*.pem
+*.p12
+auth.json
+
+# He dieu hanh
+.DS_Store
+Thumbs.db
+desktop.ini
+.idea/
+.vscode/*
+!.vscode/extensions.json
+
+# Du lieu lon
+/database/backup/*.sql
+/database/raw/*.csv
+*.zip
+*.mp4
