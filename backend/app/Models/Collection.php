@@ -1,0 +1,13 @@
+<?php
+namespace App\Models;
+use Illuminate\Database\Eloquent\Model;
+
+class Collection extends Model
+{
+    protected $table = 'collections';
+    const UPDATED_AT = null;
+    protected $fillable = ['user_id','name','description','is_public'];
+    protected $casts = ['is_public' => 'boolean'];
+    public function user() { return $this->belongsTo(User::class); }
+    public function items() { return $this->belongsToMany(Artifact::class, 'collection_items')->withPivot('note','added_at'); }
+}
